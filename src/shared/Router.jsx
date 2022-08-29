@@ -9,6 +9,7 @@ import Unknown from "../pages/Unknown";
 
 
 const Router = () => {
+
     return (
     <Routes>
         <Route path = "/" exact element={<Home/>}/>
@@ -18,6 +19,7 @@ const Router = () => {
         <Route path = "*" exact element={<Unknown/>}/>
     </Routes>
     )
+
 }
 
 export default Router;
