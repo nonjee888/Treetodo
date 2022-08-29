@@ -1,13 +1,19 @@
 import React from "react";
 import { useState } from "react";
 import './App.css';
+import Reviser from "../reviser/Reviser";
 
 function Contents(){
     const [reviser,setReviser] = useState(false);
+    const close=()=>{
+        setReviser(false);    
+    }
+    
 
 
     return(
         <>
+        {reviser === false?<Reviser/>:null}
         <div className="comment">
             <div>닉네임</div>
             <div>내용</div>
