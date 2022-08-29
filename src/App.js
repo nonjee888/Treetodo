@@ -1,6 +1,5 @@
 import React from "react";
-import Enter from "./components/Enter";
-import Router from "../src/shared/Router"
+import Router from "./shared/Router"
 
 function App() {
   return (
