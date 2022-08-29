@@ -5,7 +5,7 @@ import styled from "styled-components";
 import nextId from "react-id-generator";
 
 
-const Enter = () => {
+const Write = () => {
     let id = nextId();
     let navigate = useNavigate();
     let dispatch = useDispatch();
@@ -26,7 +26,7 @@ const Enter = () => {
     const onSubmitHandler = (e) => {
         e.preventDefault();
         if(enter.writer.trim() === "" || enter.title.trim() === "" || enter.body.trim() === "") return alert('내용을 입력하세요!')
-        dispatch(createEnter({...enter, id:id}));
+        // dispatch(createEnter({...enter, id:id}));
         setEnter(initialState);
         navigate("/enter")
     }
@@ -59,7 +59,7 @@ const Enter = () => {
 
 }
 
-export default Enter;
+export default Write;
 
 const StPostingBox = styled.form`
     border: 1px solid #ddd;
