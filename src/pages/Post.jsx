@@ -1,7 +1,15 @@
+import List from "../components/list/List"
+
+
 const Post = () => {
-  return (
-    <div></div>
-)
+    return (
+        <>  
+            <List/>
+        </>
+
+    )
 }
 
+
 export default Post;
+
