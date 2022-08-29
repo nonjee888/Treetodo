@@ -4,22 +4,22 @@ const reviews = createSlice({
 name: "reviews",    
 initialState:[
     {
-    id:0,
-    post:0,
-    writer: "아가",
-    desc: "걸음마중"
+        id:0,
+        post:0,
+        writer: "아가",
+        desc: "걸음마중"
     },
     {
-    id:1,
-    post:0,
-    writer: "나는",
-    desc: "배가안고프다"
+        id:1,
+        post:0,
+        writer: "나는",
+        desc: "배가안고프다"
     },
     {
-    id:2,
-    post:0,
-    writer: "아하하",
-    desc: "후하하"
+        id:2,
+        post:0,
+        writer: "아하하",
+        desc: "후하하"
     }],
 
     reducers:{
