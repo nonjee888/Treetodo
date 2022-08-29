@@ -1,6 +1,8 @@
 const Detail = () => {
     return (
-        <div></div>
+        <div>
+            
+        </div>
     )
 }
 

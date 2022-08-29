@@ -1,6 +1,8 @@
 const Post = () => {
   return (
-    <div></div>
+    <div>
+      
+    </div>
 )
 }
 
