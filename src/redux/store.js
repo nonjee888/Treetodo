@@ -1,11 +1,15 @@
-import { configureStore } from '@reduxjs/toolkit'
 
+import { configureStore} from "@reduxjs/toolkit";
+import posts from "./modules/posts"
 import reviews from '../redux/modules/reviews'
-// import notes from './modules/notes'
+
+
+
+
 
 export default configureStore({
-    reducer: { 
-      reviews: reviews.reducer,
-    //   notes : notes.reducer
+    reducer: {
+        posts: posts.reducer,
+        reviews: reviews.reducer,
     }
-})
+  });
