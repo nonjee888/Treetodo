@@ -5,11 +5,8 @@ import styled from "styled-components";
 import nextId from "react-id-generator";
 import {createEnter} from "../../redux/modules/enters"
 
-<<<<<<<< HEAD:src/components/Write.jsx
-
-========
->>>>>>>> master:src/components/write/Write.jsx
 const Write = () => {
+
     let id = nextId();
     let navigate = useNavigate();
     let dispatch = useDispatch();
@@ -32,7 +29,7 @@ const Write = () => {
         if(enter.writer.trim() === "" || enter.title.trim() === "" || enter.body.trim() === "") return alert('내용을 입력하세요!')
         // dispatch(createEnter({...enter, id:id}));
         setEnter(initialState);
-        navigate("/")
+        navigate("/home")
     }
 
     return (
