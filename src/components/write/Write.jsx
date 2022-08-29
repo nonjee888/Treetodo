@@ -28,7 +28,7 @@ const Write = () => {
         if(enter.writer.trim() === "" || enter.title.trim() === "" || enter.body.trim() === "") return alert('내용을 입력하세요!')
         dispatch(createEnter({...enter, id:id}));
         setEnter(initialState);
-        navigate("/enter")
+        navigate("/")
     }
 
     return (

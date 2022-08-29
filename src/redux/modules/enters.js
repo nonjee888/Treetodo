@@ -20,7 +20,8 @@ let enters = createSlice({
   ],
   reducer:{
       createEnter(state, action){
-          state.push(action.payload)
+          state.push(action.payload);
+          console.log(state);
       },
       removeEnter(state, action){
          let index = state.findIndex(post => post.id === action.payload)
