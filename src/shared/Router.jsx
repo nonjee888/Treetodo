@@ -9,16 +9,7 @@ import Unknown from "../pages/Unknown";
 
 
 const Router = () => {
-<<<<<<< HEAD
-    return(
-    <Routes>
-        <Route path = "/" element={<Home/>}/>
-        <Route path = "/enter" element={<Enter/>}/>
-        <Route path = "/Post" element={<Post/>}/>
-        <Route path = "/detail/:id" element={<Detail/>}/>
-        <Route path = "*" element={<Unknown/>}/>
-    </Routes>)
-=======
+
     return (
     <Routes>
         <Route path = "/" exact element={<Home/>}/>
@@ -28,7 +19,7 @@ const Router = () => {
         <Route path = "*" exact element={<Unknown/>}/>
     </Routes>
     )
->>>>>>> master
+
 }
 
 export default Router;

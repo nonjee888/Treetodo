@@ -23,19 +23,11 @@ let enters = createSlice({
           state.push(action.payload)
       },
       removeEnter(state, action){
-<<<<<<<< HEAD:src/redux/modules/posts.js
-         let index = state.findIndex(enter => enter.id === action.payload)
-         state.splice(index, 1 );
-      },
-      updateEnter(state, action){
-          let index = state.findIndex(enter => enter.id === action.payload.id)
-========
          let index = state.findIndex(post => post.id === action.payload)
          state.splice(index, 1 );
       },
       updateEnter(state, action){
           let index = state.findIndex(post => post.id === action.payload.id)
->>>>>>>> master:src/redux/modules/enters.js
           state.splice(index, 1, action.payload );
        }
   }
