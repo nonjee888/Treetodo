@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { configureStore } from "@reduxjs/toolkit";
 import enters from "./modules/enters"
 import reviews from './modules/reviews'
@@ -7,18 +6,7 @@ export default configureStore({
     reducer: {
         enters: enters.reducer,
         reviews: reviews.reducer,
-=======
 
-import { configureStore } from '@reduxjs/toolkit'
-
-import enters from './modules/enters'
-import reviews from './modules/reviews'
-
-export default configureStore({
-    reducer: { 
-      enters: enters.reducer,
-      reviews : reviews.reducer
->>>>>>> a7b422ea1ae60d80a982ac814a00b04b77536662
     }
 })
 

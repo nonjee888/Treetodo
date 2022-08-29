@@ -9,11 +9,12 @@ function Post({post}){
         <>
         <div>
         <div className="postlist">
-            <p onClick={() => navigate('/detail/'+ post.id)}>{post.title}</p>
-            <p>{post.body}</p>
-            <p>{post.count}</p>
-            <p>{post.password}</p>
-            <p>{post.name}</p>
+            <p onClick={() => navigate('/detail/'+ post.id)}>제목 : {post.title}</p>
+            <p>내용 : {post.body}</p>
+            <p>카운트 : {post.count}</p>
+            <p>작성자 : {post.writer}</p>
+            <p>비밀번호 : {post.password}</p>
+           
         </div>
         </div>
         </>

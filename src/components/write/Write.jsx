@@ -26,13 +26,9 @@ const Write = () => {
     }
     const onSubmitHandler = (e) => {
         e.preventDefault();
-<<<<<<< HEAD
-        if(enter.writer.trim() === "" || enter.title.trim() === "" || enter.body.trim() === "") return alert('내용을 입력하세요!')
-        // dispatch(createEnter({...enter, id:id}));
-=======
+
         if(enter.writer.trim() === "" || enter.title.trim() === "" || enter.body.trim() === "") return alert('내용을 입력하세요!');
         dispatch(createEnter({ ...enter, id: id }));
->>>>>>> a7b422ea1ae60d80a982ac814a00b04b77536662
         setEnter(initialState);
         navigate("/")
     };

@@ -1,9 +1,9 @@
 import React from 'react';
 import {useState} from 'react';
 import Contents from '../contents/Contents'
-import {useSelector} from 'react-redux'
+import {useSelector,useDispatch} from 'react-redux'
 import {useParams} from "react-router-dom"
-// import {useDispatch} from 'react-redux'
+import { createReview } from '../../redux/modules/reviews';
 import './App.css';
 
 
@@ -20,12 +20,13 @@ function Comment(){
     const [comment,setComment] = useState(initialState);
     const review = useSelector((state) => state.reviews);
     const {id} = useParams();
-    // const [desc, setDesc] = useState([]);
+    let dispatch = useDispatch();
     console.log(review)
 
     const submitContent = (e) => {
         e.preventDefault();
-
+        dispatch(createReview({ ...comment, id: id }));
+        setComment(initialState);
     }
     const onChangeHandler = (event) => {
         const inputValue = event.target.value;
