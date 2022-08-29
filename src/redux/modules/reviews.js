@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const reviews = createSlice({
+let reviews = createSlice({
 name: "reviews",    
 initialState:[
     {

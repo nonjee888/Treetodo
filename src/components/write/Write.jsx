@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux/";
 import styled from "styled-components";
 import nextId from "react-id-generator";
-import {createEnter} from "../../redux/modules/enters"
+import { createEnter } from "../../redux/modules/enters"
+
 
 const Write = () => {
     let id = nextId();
@@ -25,29 +26,29 @@ const Write = () => {
     }
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        if(enter.writer.trim() === "" || enter.title.trim() === "" || enter.body.trim() === "") return alert('내용을 입력하세요!')
-        // dispatch(createEnter({...enter, id:id}));
+        if(enter.writer.trim() === "" || enter.title.trim() === "" || enter.body.trim() === "") return alert('내용을 입력하세요!');
+        dispatch(createEnter({ ...enter, id: id }));
         setEnter(initialState);
         navigate("/")
-    }
+    };
 
     return (
-        <StPostingBox>
-            <StInputGroup onSubmit={onSubmitHandler}>
+        <StPostingBox onSubmit={onSubmitHandler}>
+            <StInputGroup>
                 <StWriter>
-                    <label>이름:</label>
+                <label>이름 :</label>
                     <StInput type="text" name="writer" value={enter.writer} onChange={onChangeHandler}/>
                 </StWriter>
                 <StTitle>
-                    <label>제목:</label>
+                <label>제목 :</label>
                     <StInput type="text" name="title" value={enter.title} onChange={onChangeHandler} minLength="3"/>
                 </StTitle>
                 <StBody>
-                    <label>내용:</label>
+                <label>내용 :</label>
                     <StBodyInput type="textarea" name="body" value={enter.body} onChange={onChangeHandler} minLength="10"/>
                 </StBody>
                 <StPassWord>
-                    <lable>비밀번호:</lable>
+                <label>비밀번호 :</label>
                     <StPassInput type="password" name="password" value={enter.password} onChange={onChangeHandler} minLength="4"/>
                 </StPassWord>
             </StInputGroup>
