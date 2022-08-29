@@ -3,7 +3,7 @@ import { useState } from "react";
 import './App.css';
 import Reviser from "../reviser/Reviser";
 
-function Contents(){
+function Contents({desc}){
     const [reviser,setReviser] = useState(false);
     const close=()=>{
         setReviser(false);    
@@ -14,15 +14,15 @@ function Contents(){
     return(
         <>
         {reviser === false?<Reviser/>:null}
-        <div className="comment">
-            <div>닉네임</div>
-            <div>내용</div>
+        <div className="comment" key={desc.id}>
+            <div>{desc.writer}</div>
+            <div>{desc.desc}</div>
             <button>수정하기</button>
             <button>삭제하기</button>
         </div>
         <div className="comment">
-            <div>닉네임</div>
-            <div>내용</div>
+            <div>{desc.writer}</div>
+            <div>{desc.desc}</div>
             <button>수정하기</button>
             <button>삭제하기</button>
         </div>

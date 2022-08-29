@@ -8,7 +8,7 @@ const Main = () => {
     return(
         <div>
             <Button onClick={()=> navigate('/enter')} >글 작성</Button>
-            <Button onClick={()=> navigate('/detail')} >게시글 조회</Button>
+            <Button onClick={()=> navigate('/post')} >게시글 조회</Button>
         </div>
     );
 }

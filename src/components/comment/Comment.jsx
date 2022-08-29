@@ -1,10 +1,12 @@
 import React from 'react';
 import {useState} from 'react';
 import Contents from '../contents/Contents'
+import {useSelector} from 'react-redux'
+import {useParams} from "react-router-dom"
 // import {useDispatch} from 'react-redux'
 import './App.css';
 
-let number = 1;
+
 function Comment(){
     
     
@@ -16,7 +18,10 @@ function Comment(){
 
     }
     const [comment,setComment] = useState(initialState);
-    // const [review, setReview] = useState("");
+    const review = useSelector((state) => state.reviews);
+    const {id} = useParams();
+    // const [desc, setDesc] = useState([]);
+    console.log(review)
 
     const submitContent = (e) => {
         e.preventDefault();
@@ -26,6 +31,10 @@ function Comment(){
         const inputValue = event.target.value;
         setComment({...comment});
       };
+
+    const reviewList = review.filter((review) => {
+        return String(review.post) === id;
+    })  
     
     console.log(comment);
     return (
@@ -42,7 +51,12 @@ function Comment(){
         </form> 
         <div className="commentlist">
             댓글 리스트
-            <Contents/>
+            {reviewList.map((desc) => {
+                return(
+                    <Contents desc={desc} key={desc.id}/>
+                )
+            })}
+            
         </div>
         </>
         
