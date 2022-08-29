@@ -5,10 +5,6 @@ import styled from "styled-components";
 import nextId from "react-id-generator";
 import {createEnter} from "../../redux/modules/enters"
 
-<<<<<<<< HEAD:src/components/Write.jsx
-
-========
->>>>>>>> master:src/components/write/Write.jsx
 const Write = () => {
     let id = nextId();
     let navigate = useNavigate();
