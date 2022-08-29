@@ -9,13 +9,15 @@ import Unknown from "../pages/Unknown";
 
 
 const Router = () => {
+    return (
     <Routes>
-        <Route path = "/" element={<Home/>}/>
-        <Route path = "/enter" element={<Enter/>}/>
-        <Route path = "/Post" element={<Post/>}/>
-        <Route path = "/detail/:id" element={<Detail/>}/>
-        <Route path = "*" element={<Unknown/>}/>
+        <Route path = "/" exact element={<Home/>}/>
+        <Route path = "/enter" exact element={<Enter/>}/>
+        <Route path = "/post" exact element={<Post/>}/>
+        <Route path = "/detail/:id" exact element={<Detail/>}/>
+        <Route path = "*" exact element={<Unknown/>}/>
     </Routes>
+    )
 }
 
 export default Router;
