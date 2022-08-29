@@ -1,6 +1,10 @@
+import Write from "../components/write/Write";
+
 const Enter = () => {
     return (
-        <div></div>
+        <>
+            <Write/>
+        </>
     )
 }
 
