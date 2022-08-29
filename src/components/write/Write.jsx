@@ -18,41 +18,42 @@ const Write = () => {
         count: 0
     }
     const [enter, setEnter] = useState(initialState)
-
+    console.log(enter)
     const onChangeHandler = (e) => {
         const {value, name} = e.target
         setEnter({...enter, [name]: value});
     }
+
     const onSubmitHandler = (e) => {
         e.preventDefault();
         if(enter.writer.trim() === "" || enter.title.trim() === "" || enter.body.trim() === "") return alert('내용을 입력하세요!')
-        // dispatch(createEnter({...enter, id:id}));
+        dispatch(createEnter({...enter, id:id}));
         setEnter(initialState);
-        navigate("/")
+        navigate("/post")
     }
 
     return (
-        <StPostingBox>
-            <StInputGroup onSubmit={onSubmitHandler}>
+        <StPostingBox onSubmit={onSubmitHandler}>
+            <StInputGroup>
                 <StWriter>
-                    <label>이름:</label>
+                    <label>이름 :</label>
                     <StInput type="text" name="writer" value={enter.writer} onChange={onChangeHandler}/>
                 </StWriter>
                 <StTitle>
-                    <label>제목:</label>
+                    <label>제목 :</label>
                     <StInput type="text" name="title" value={enter.title} onChange={onChangeHandler} minLength="3"/>
                 </StTitle>
                 <StBody>
-                    <label>내용:</label>
+                    <label>내용 :</label>
                     <StBodyInput type="textarea" name="body" value={enter.body} onChange={onChangeHandler} minLength="10"/>
                 </StBody>
                 <StPassWord>
-                    <lable>비밀번호:</lable>
+                    <label>비밀번호 :</label>
                     <StPassInput type="password" name="password" value={enter.password} onChange={onChangeHandler} minLength="4"/>
                 </StPassWord>
             </StInputGroup>
             <StSubmit>
-                <StButton>등록하기</StButton>
+                <StButton type="submit">등록하기</StButton><StBackBtn onClick={()=>{navigate("/")}}>이전으로</StBackBtn>
             </StSubmit>
         </StPostingBox>
     )
@@ -116,9 +117,11 @@ const StPassWord = styled.div`
 `
 
 const StSubmit = styled.div`
-    padding: 10px 0 0 180px;
+    padding: 10px 0 0 90px;
     height: 30%;
     width: 100%;
+    display: flex;
+    gap: 20px;
 `
 const StButton = styled.button`
     height: 35px;
@@ -134,4 +137,10 @@ const StInputGroup = styled.div`
 const StPassInput = styled.input`
     height: 20px;
     width: 200px;
+`
+const StBackBtn = styled.button`
+    height: 35px;
+    width: 150px;
+    border: #f1f1f1 2px solid;
+    border-radius: 10px;
 `

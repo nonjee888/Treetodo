@@ -7,7 +7,6 @@ import Post from "../pages/Post";
 import Detail from "../pages/Detail";
 import Unknown from "../pages/Unknown";
 
-
 const Router = () => {
 
     return (
