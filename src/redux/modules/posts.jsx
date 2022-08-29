@@ -33,6 +33,6 @@ let posts = createSlice({
   }
 })
 
-export let {createTodo, removeTodo, updateTodo} = todos.actions;
+export let {createPost, removePost, updatePost} = posts.actions;
 
 export default posts;
