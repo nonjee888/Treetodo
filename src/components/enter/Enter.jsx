@@ -26,7 +26,7 @@ const Enter = () => {
     const onSubmitHandler = (e) => {
         e.preventDefault();
         if(enter.writer.trim() === "" || enter.title.trim() === "" || enter.body.trim() === "") return alert('내용을 입력하세요!')
-        dispatch(createEnter({...enter, id:id}));
+        // dispatch(createEnter({...enter, id:id}));
         setEnter(initialState);
         navigate("/enter")
     }
