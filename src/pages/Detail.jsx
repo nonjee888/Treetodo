@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Comment from "../components/comment/Comment";
 
 function Detail(){
@@ -5,3 +6,12 @@ function Detail(){
 }
 
 export default Detail; 
+=======
+const Detail = () => {
+    return (
+        <div></div>
+    )
+}
+
+export default Detail;
+>>>>>>> master
