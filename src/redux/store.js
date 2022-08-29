@@ -1,5 +1,7 @@
+
 import { configureStore} from "@reduxjs/toolkit";
 import posts from "./modules/posts"
+import reviews from '../redux/modules/reviews'
 
 
 
@@ -8,5 +10,6 @@ import posts from "./modules/posts"
 export default configureStore({
     reducer: {
         posts: posts.reducer,
+        reviews: reviews.reducer,
     }
   });
