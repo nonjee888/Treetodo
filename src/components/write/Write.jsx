@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import nextId from "react-id-generator";
+import {createEnter} from "../../redux/modules/enters"
 
-
-const Enter = () => {
+const Write = () => {
     let id = nextId();
     let navigate = useNavigate();
     let dispatch = useDispatch();
@@ -59,7 +59,7 @@ const Enter = () => {
 
 }
 
-export default Enter;
+export default Write;
 
 const StPostingBox = styled.form`
     border: 1px solid #ddd;

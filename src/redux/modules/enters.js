@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-let posts = createSlice({
-  name:"posts",
+let enters = createSlice({
+  name:"enters",
   initialState:[
       {
         id: 0,
@@ -19,20 +19,20 @@ let posts = createSlice({
       },
   ],
   reducer:{
-      createPost(state, action){
+      createEnter(state, action){
           state.push(action.payload)
       },
-      removePost(state, action){
+      removeEnter(state, action){
          let index = state.findIndex(post => post.id === action.payload)
          state.splice(index, 1 );
       },
-      updatePost(state, action){
+      updateEnter(state, action){
           let index = state.findIndex(post => post.id === action.payload.id)
           state.splice(index, 1, action.payload );
        }
   }
 })
 
-export let {createPost, removePost, updatePost} = posts.actions;
+export let {createEnter, removeEnter, updateEnter} = enters.actions;
 
-export default posts;
+export default enters;
