@@ -4,7 +4,7 @@ import Comment from "../components/comment/Comment";
 const Enter = () => {
     return (
         <>
-            <Comment/>
+            
             <Write/>
         </>
     )
