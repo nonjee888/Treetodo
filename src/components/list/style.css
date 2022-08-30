@@ -1,0 +1,30 @@
+.listbox{
+    display: flex;
+    gap: 15px;
+    font-size: 16px;
+    flex-wrap: wrap;
+
+}
+.list{
+    width: 100%;
+    max-width: 1200px;
+    min-width: 800px;
+    margin: 0 auto;
+}
+.tomain-but{
+    border: 3px solid red;
+    width: 110px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom:30px;
+}
+.towrite-but{
+    border: 3px solid blue;
+    width: 110px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom:30px;
+    margin-left:10px;
+}
