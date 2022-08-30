@@ -1,0 +1,18 @@
+.postlist{
+    border: 2px solid green;
+    width: 250px;
+    height: 260px;
+    border-radius: 10px;
+    align-items: center;
+    gap: 20px;
+    text-align: start;
+    padding: 0px 0px 0px 30px;
+    margin-bottom: 30px;
+}
+.todetail:hover{
+   color: blue; 
+   cursor: pointer;
+}
+.desc{
+    /* margin-bottom: 50px; */
+}

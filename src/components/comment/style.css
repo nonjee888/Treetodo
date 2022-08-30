@@ -1,0 +1,45 @@
+.commentlist{
+    margin-top : 30px;
+}
+.tolist-but{
+    border: 3px solid red;
+    width: 110px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom:30px;
+    margin-left: 10px;
+}
+.comment{
+    max-width:1200px;
+    width: 95% auto;
+    margin: 0 auto;
+    /* border: 2px solid green; */
+}
+.label{
+    margin-right: 20px;
+}
+.inputName{
+    width: 200px;
+}
+.inputComment{
+    width: 200px;
+    height: 100px;
+}
+.name{
+    margin-bottom: 20px;
+}
+.layout{
+    border: 2px solid black;
+    margin-right: 900px;
+    padding: 10px;
+}
+.write-but{
+    border: 3px solid red;
+    width: 110px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top:20px;
+    margin-left: 150px;
+}
