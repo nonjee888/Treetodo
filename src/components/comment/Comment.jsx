@@ -4,10 +4,9 @@ import './App.css';
 
 
 function Comment(){
-    
-    
-    return
-    
+    return(
+        <>나옴</>
+    )
 }   
 
 export default Comment;

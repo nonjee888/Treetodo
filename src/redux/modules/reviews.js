@@ -27,13 +27,11 @@ initialState:[
             state.push(action.payload);
         },
         removeReview(state, action){
-            console.log(action.payload);
             let index = state.findIndex(review => review.id === action.payload);
                         state.splice(index,1);
 
         },
         updateReview(state, action){
-            console.log(action.payload);
             let index = state.findIndex(enter => enter.id === action.payload.id);
                         state.splice(index, 1, action.payload);
         }

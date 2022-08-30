@@ -7,7 +7,6 @@ export default configureStore({
     reducer: {
         enters: enters.reducer,
         reviews: reviews.reducer
-
     }
 })
 

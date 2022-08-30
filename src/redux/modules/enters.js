@@ -27,10 +27,6 @@ let enters = createSlice({
 		updateEnter(state, action){
 			let index = state.findIndex(todo => todo.id === action.payload);
 			state.splice(index,1, action.payload);
-<<<<<<< HEAD
-=======
-
->>>>>>> 0789b4126400ef2b88329d686b0f27d9d4378fae
 		},
 		removeEnter(state, action){
 			let  index = state.findIndex(todo=>  todo.id === action.payload);
