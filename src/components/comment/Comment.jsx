@@ -2,15 +2,16 @@ import React from 'react';
 import {useState} from 'react';
 import Contents from '../contents/Contents'
 import {useSelector,useDispatch} from 'react-redux'
-import {useParams} from "react-router-dom"
+import {useParams,useNavigate} from "react-router-dom"
 import { createReview } from '../../redux/modules/reviews';
 import nextId from 'react-id-generator';
-import './App.css';
+import "./style.css";
 
 
 function Comment(){
     
-    let comId = nextId();
+    const navigate = useNavigate();
+    const comId = nextId();
     const initialState = {
         id: 0,
         post:0,
@@ -22,27 +23,29 @@ function Comment(){
     const review = useSelector((state) => state.reviews);
     const {id} = useParams();
     let dispatch = useDispatch();
-    console.log(review)
+    // console.log(review)
 
+    const reviewList = review.filter((desc) => {
+        return String(desc.post) === id;
+    })  
+    
     const submitContent = (e) => {
         e.preventDefault();
-        dispatch(createReview({ ...comment, id: comId}));
+        dispatch(createReview({ ...comment, id: comId, post:id}));
         setComment(initialState);
     }
     const onChangeHandler = (event) => {
         const {name, value} = event.target;
         setComment({...comment, [name]:value});
       };
-
-    const reviewList = review.filter((review) => {
-        return String(review.post) === id;
-    })  
-    
-    console.log(comment);
+ 
+    // console.log(comment);
     return (
         <>
         <form onSubmit={submitContent}>
-        <div>댓글페이지</div>
+        <div>댓글페이지
+            <button className='tolist-but' onClick={() => {navigate('/post')}}>이전으로</button>
+        </div>
         <div>
             <label> 닉네임</label>
             <input className="input" type="text" name="writer" onChange={onChangeHandler} value={comment.writer}/>

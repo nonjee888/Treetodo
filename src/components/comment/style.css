@@ -1,0 +1,12 @@
+.commentlist{
+    margin-top : 30px;
+}
+.tolist-but{
+    border: 3px solid red;
+    width: 110px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom:30px;
+    margin-left: 10px;
+}
