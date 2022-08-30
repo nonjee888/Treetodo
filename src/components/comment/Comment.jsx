@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import {useState} from 'react';
 import Contents from '../contents/Contents'
 import {useSelector,useDispatch} from 'react-redux'
@@ -7,9 +6,7 @@ import {useParams,useNavigate} from "react-router-dom"
 import { createReview } from '../../redux/modules/reviews';
 import nextId from 'react-id-generator';
 import "./style.css";
-=======
-import './App.css';
->>>>>>> 0e1a4c99c4f395f51a01a12594f43119d7b9800c
+
 
 
 function Comment(){
