@@ -1,12 +1,13 @@
-import Comment from "../components/comment/Comment";
 
+import Comment from "../components/comment/Comment"
+import Header from '../components/header/Header';
 
 function Detail(){
-    return(
-    <>
-    <Comment/>
-    </>
+    return (
+        <>
+        <Header/>
+        <Comment/>
+        </>
     )
 }
-
 export default Detail;

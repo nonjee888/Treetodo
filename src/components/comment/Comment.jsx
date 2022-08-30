@@ -10,6 +10,7 @@ import "./style.css";
 
 
 function Comment(){
+
     
     const navigate = useNavigate();
     const comId = nextId();
@@ -76,6 +77,7 @@ function Comment(){
         
     )
     
+
 }   
 
 export default Comment;
